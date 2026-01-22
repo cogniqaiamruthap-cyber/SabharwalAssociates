@@ -272,12 +272,12 @@ footer {
 
     /* Navbar Mobile Fixes */
     .navbar-brand {
-        font-size: 1.1rem;
-        /* Smaller font for brand */
-        max-width: 75%;
+        font-size: 0.95rem;
+        /* Smaller font for brand to fit one line */
+        max-width: 85%;
         /* Prevent overlapping with toggler */
-        white-space: normal;
-        /* Allow wrapping if needed */
+        white-space: nowrap;
+        /* Force one line */
         line-height: 1.2;
     }
 
