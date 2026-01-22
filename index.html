@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabharwal Associates | Real Estate Experts in Punjabi Bagh, Delhi</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <meta name="description"
+        content="Sabharwal Associates - Leading Property Dealers & Consultants in Punjabi Bagh, Delhi. Specialized in Residential, Commercial & Plots.">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <img src="logo.png" alt="Sabharwal Associates Logo" height="40" class="d-inline-block">
+                <span class="fw-bold"><span class="text-primary">SABHARWAL</span> <span
+                        class="text-white">ASSOCIATES</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link px-3" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#listings">Property Listings</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 btn btn-primary text-white ms-lg-3 py-2 px-4 shadow-sm"
+                            href="#" data-bs-toggle="modal" data-bs-target="#enquiryModal">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-section text-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-xl-8">
+                    <div class="hero-content-card animate-up text-center">
+                        <h1 class="display-3 fw-bold mb-4">Your Trusted Partner in <span class="text-primary">Delhi Real
+                                Estate</span></h1>
+                        <p class="lead mb-5 px-md-5">Specializing in Punjabi Bagh and surrounding areas. Find your dream
+                            home or commercial space with Sabharwal Associates.</p>
+                        <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                            <a href="#listings" class="btn btn-primary btn-lg px-5 py-3 shadow">Explore Listings</a>
+                            <a href="#" class="btn btn-outline-light btn-lg px-5 py-3" data-bs-toggle="modal"
+                                data-bs-target="#enquiryModal">Book Consultation</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Section -->
+    <section class="stats-section py-5 bg-light border-bottom">
+        <div class="container">
+            <div class="row text-center g-4">
+                <div class="col-md-3 col-6">
+                    <h2 class="fw-bold text-primary mb-0">20+</h2>
+                    <p class="text-muted mb-0">Years Experience</p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <h2 class="fw-bold text-primary mb-0">500+</h2>
+                    <p class="text-muted mb-0">Properties Sold</p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <h2 class="fw-bold text-primary mb-0">1k+</h2>
+                    <p class="text-muted mb-0">Happy Clients</p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <h2 class="fw-bold text-primary mb-0">Delhi</h2>
+                    <p class="text-muted mb-0">Prime Locations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Listings Section -->
+    <section id="listings" class="py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3">Featured <span class="text-primary">Portfolio</span></h2>
+                <p class="text-muted">Handpicked residential and commercial properties for you.</p>
+                <div class="d-flex justify-content-center gap-2 mt-4 flex-wrap" id="filter-buttons">
+                    <button class="btn btn-outline-primary active filter-btn" data-filter="all">All Properties</button>
+                    <button class="btn btn-outline-primary filter-btn" data-filter="residential">Residential</button>
+                    <button class="btn btn-outline-primary filter-btn" data-filter="commercial">Commercial</button>
+                    <button class="btn btn-outline-primary filter-btn" data-filter="plots">Plots</button>
+                </div>
+            </div>
+
+            <div class="row g-4" id="listings-container">
+                <!-- Listings will be injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3">Our <span class="text-primary">Services</span></h2>
+                <p class="text-muted">Comprehensive real estate solutions tailored to your needs.</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card text-center p-4">
+                        <h4 class="fw-bold mb-3">Property Consultation</h4>
+                        <p class="text-muted mb-0">Expert advice on buying, selling, and renting residential and
+                            commercial properties.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card text-center p-4">
+                        <h4 class="fw-bold mb-3">Property Valuation</h4>
+                        <p class="text-muted mb-0">Get accurate market estimations for your property to ensure the best
+                            deal.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card text-center p-4">
+                        <h4 class="fw-bold mb-3">Legal Guidance</h4>
+                        <p class="text-muted mb-0">Complete assistance with property documentation, registration, and
+                            legal verification.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card text-center p-4">
+                        <h4 class="fw-bold mb-3">Home Loans</h4>
+                        <p class="text-muted mb-0">We connect you with leading banks for quick and hassle-free home loan
+                            approvals.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card text-center p-4">
+                        <h4 class="fw-bold mb-3">Vastu Consulting</h4>
+                        <p class="text-muted mb-0">Vastu-compliant property options to bring peace and prosperity to
+                            your home.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card text-center p-4">
+                        <h4 class="fw-bold mb-3">Interior Design</h4>
+                        <p class="text-muted mb-0">Transform your space with our network of trusted and creative
+                            interior designers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container py-4">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="about-img-wrapper position-relative">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1073&q=80"
+                            alt="Our Team" class="img-fluid rounded-4 shadow-lg">
+                        <div
+                            class="about-experience bg-primary text-white p-4 rounded-4 shadow position-absolute bottom-0 start-0 m-3 d-none d-sm-block">
+                            <h4 class="mb-0 fw-bold">Helping families since 2005</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                    <h2 class="display-6 fw-bold mb-4">Leading Real Estate <span class="text-primary">Consultants</span>
+                        In Punjabi Bagh</h2>
+                    <p class="text-muted mb-4">Sabharwal Associates has been a cornerstone of the Punjabi Bagh real
+                        estate market for nearly two decades. We understand that buying or selling a property is more
+                        than just a transaction; it's a milestone in your life.</p>
+                    <ul class="list-unstyled mb-5">
+                        <li class="mb-3 d-flex align-items-center"><i
+                                class="fas fa-check-circle text-primary me-3 fs-5"></i> Personalised Property Guidance
+                        </li>
+                        <li class="mb-3 d-flex align-items-center"><i
+                                class="fas fa-check-circle text-primary me-3 fs-5"></i> Extensive Network across Delhi
+                        </li>
+                        <li class="mb-3 d-flex align-items-center"><i
+                                class="fas fa-check-circle text-primary me-3 fs-5"></i> Transparent Dealings & Legal
+                            Support</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary btn-lg px-5 py-3 shadow">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="row g-3 g-lg-5">
+                <div class="col-lg-5">
+                    <h2 class="display-6 fw-bold mb-4">Get In <span class="text-primary">Touch</span></h2>
+                    <p class="text-muted mb-5">Ready to find your next property? Our experts are here to help you every
+                        step of the way.</p>
+
+                    <div class="contact-info mb-4">
+                        <div class="d-flex mb-4">
+                            <div class="icon-box bg-primary-light text-primary p-3 rounded-circle me-3">
+                                <i class="fas fa-map-marker-alt fs-4"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1 fw-bold">Location</h5>
+                                <p class="text-muted mb-0">Punjabi Bagh, New Delhi, India</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-4">
+                            <div class="icon-box bg-primary-light text-primary p-3 rounded-circle me-3">
+                                <i class="fas fa-phone-alt fa-flip-horizontal fs-4"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1 fw-bold">Call Us</h5>
+                                <p class="text-muted mb-0">+91 99999 XXXXX (Placeholder)</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-4">
+                            <div class="icon-box bg-primary-light text-primary p-3 rounded-circle me-3">
+                                <i class="fas fa-envelope fs-4"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1 fw-bold">Email</h5>
+                                <p class="text-muted mb-0">info@sabharwalassociates.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-5">
+                        <a href="https://wa.me/919999999999" target="_blank"
+                            class="btn btn-success btn-lg w-100 shadow-sm py-3 mb-3 fab-whatsapp-btn">
+                            <i class="fab fa-whatsapp me-2"></i> Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="card border-0 shadow-lg rounded-4 p-4 p-md-5">
+                        <h3 class="fw-bold mb-4">Send us a Message</h3>
+                        <form id="lead-form">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Name</label>
+                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Phone</label>
+                                    <input type="tel" class="form-control" placeholder="Your Phone" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-control" placeholder="Your Email">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Property Interest</label>
+                                    <select class="form-select">
+                                        <option value="buy">Interested in Buying</option>
+                                        <option value="sell">Interested in Selling</option>
+                                        <option value="rent">Interested in Renting</option>
+                                        <option value="invest">Commercial Investment</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Message</label>
+                                    <textarea class="form-control" rows="4"
+                                        placeholder="Tell us about your requirements..."></textarea>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100 py-3 shadow">Submit
+                                        Inquiry</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Map Embed Placeholder -->
+    <div class="map-container">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224128.301431!2d77.068897!3d28.5272803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b34766247%3A0xd3b83984534f4b!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1705853500000!5m2!1sen!2sin"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4 border-top border-secondary">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Company Info -->
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="fw-bold mb-4 text-white">
+                        <span class="text-primary">SABHARWAL</span> ASSOCIATES
+                    </h4>
+                    <p class="text-white-50 mb-4">Your trusted partner in Punjabi Bagh real estate for over 20 years. We
+                        specialize in residential and commercial properties with a focus on integrity and professional
+                        excellence.</p>
+                    <div class="social-links d-flex gap-3">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 col-6 ms-lg-auto">
+                    <h5 class="fw-bold mb-4 text-white">Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="#home">Home</a></li>
+                        <li class="mb-2"><a href="#listings">Portfolios</a></li>
+                        <li class="mb-2"><a href="#services">Our Services</a></li>
+                        <li class="mb-2"><a href="#about">About Us</a></li>
+                        <li class="mb-2"><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h5 class="fw-bold mb-4 text-white">Services</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2">Property Valuation</li>
+                        <li class="mb-2">Legal Guidance</li>
+                        <li class="mb-2">Vastu Consulting</li>
+                        <li class="mb-2">Home Loans</li>
+                        <li class="mb-2">Interior Design</li>
+                    </ul>
+                </div>
+
+                <!-- Contact Details -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-4 text-white">Office Address</h5>
+                    <ul class="list-unstyled footer-contact">
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="fas fa-map-marker-alt text-primary mt-1 me-3"></i>
+                            <span class="text-white-50">Punjabi Bagh, New Delhi, India</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center">
+                            <i class="fas fa-phone-alt fa-flip-horizontal text-primary me-3"></i>
+                            <span class="text-white-50">+91 99999 XXXXX</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center">
+                            <i class="fas fa-envelope text-primary me-3"></i>
+                            <span class="text-white-50">info@sabharwal.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="my-4 border-secondary opacity-25">
+
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 text-white-50 small">&copy; 2026 Sabharwal Associates. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <p class="mb-0 text-white-50 small">Designed by Cogniq </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enquiry Modal -->
+    <div class="modal fade" id="enquiryModal" tabindex="-1" aria-labelledby="enquiryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 shadow-lg rounded-4">
+                <div class="modal-header border-0 pb-0">
+                    <h3 class="fw-bold mb-0" id="enquiryModalLabel">Enquiry <span class="text-primary">Form</span></h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 p-md-5">
+                    <p class="text-muted mb-4">Please fill out the form below and our experts will get back to you
+                        shortly.</p>
+                    <form id="modal-lead-form">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Your Name</label>
+                                <input type="text" class="form-control py-3" placeholder="Enter your full name"
+                                    required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Phone Number</label>
+                                <input type="tel" class="form-control py-3" placeholder="Enter your mobile number"
+                                    required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-semibold">Email Address</label>
+                                <input type="email" class="form-control py-3" placeholder="name@example.com">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-semibold">Requirement Type</label>
+                                <select class="form-select py-3">
+                                    <option value="buy">Interested in Buying</option>
+                                    <option value="sell">Interested in Selling</option>
+                                    <option value="rent">Interested in Renting</option>
+                                    <option value="invest">Commercial Investment</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-semibold">Message / Requirements</label>
+                                <textarea class="form-control" rows="4"
+                                    placeholder="Tell us more about your preferences (Location, Budget, BHK, etc.)"></textarea>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="btn btn-primary btn-lg w-100 py-3 shadow">Submit Your
+                                    Inquiry</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chatbot Container -->
+    <div id="chatbot-root"></div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="bot.js"></script>
+</body>
+
+</html>
