@@ -92,9 +92,11 @@ CORE MISSION:
 STRICT RULES:
 1. You are ONLY for Sabharwal Associates. NEVER mention dental clinics, gyms, or Birmingham.
 2. If asked about something unrelated to Sabharwal Associates or real estate in Delhi, politely redirect the conversation.
-3. Keep responses professional, warm, and concise (2-3 sentences).
-4. Always prioritize Punjabi Bagh and surrounding Delhi areas.
-5. NEVER use emojis in your responses. Keep the tone strictly professional.`
+3. CRITICAL: Keep ALL responses to maximum 2-3 lines of text (about 30-40 words total).
+4. Use 1-2 short sentences. Be direct and concise.
+5. NO preamble (no "Sure," "Hello," "I'd be happy to," etc.). Get straight to the answer.
+6. Always prioritize Punjabi Bagh and surrounding Delhi areas.
+7. NEVER use emojis or bullet points unless specifically asked.`
             };
 
             const finalSystemPrompt = bizConfig.systemPrompt || env.SYSTEM_PROMPT || 'You are a helpful assistant.';
@@ -136,8 +138,9 @@ STRICT RULES:
                 contents.unshift(systemPromptMessage, systemAckMessage);
             }
 
-            // Build current message parts
-            const currentParts = [{ text: userMessage }];
+            // Build current message parts with strict brevity reminder
+            const constraintReminder = "\n\n(IMPORTANT: Max 15 words. Strictly 1 sentence. No preamble.)";
+            const currentParts = [{ text: userMessage + constraintReminder }];
 
             // Add current message
             contents.push({
@@ -157,10 +160,10 @@ STRICT RULES:
                     }
                 } : {}),
                 generationConfig: {
-                    temperature: body.temperature || 0.85,
+                    temperature: body.temperature || 0.4,
                     topK: body.topK || 40,
                     topP: body.topP || 0.95,
-                    maxOutputTokens: body.maxOutputTokens || 512,
+                    maxOutputTokens: body.maxOutputTokens || 150,
                 },
                 safetySettings: [
                     {

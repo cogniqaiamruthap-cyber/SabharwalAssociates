@@ -62,7 +62,7 @@ class RealEstateChatbot {
         this.elements.clear.addEventListener('click', () => this.clearChat());
 
         // Start with a greeting
-        this.addMessage("Welcome to Sabharwal Associates! (v2.0 - Sabharwal Verified) I'm your virtual assistant for Punjabi Bagh real estate. How can I help you today?");
+        this.addMessage("Hello! I'm your Sabharwal Associates assistant for Punjabi Bagh real estate. Ask me about properties, pricing, or schedule a viewing!");
     }
 
     toggleChat() {

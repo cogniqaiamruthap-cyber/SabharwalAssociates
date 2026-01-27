@@ -55,7 +55,7 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    min-height: 70vh;
+    min-height: 50vh;
     padding: 40px 0;
     display: flex;
     align-items: center;
